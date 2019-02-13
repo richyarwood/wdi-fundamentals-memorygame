@@ -31,6 +31,7 @@ var createBoard = function() {
 		var cardElement = document.createElement('img');
 		cardElement.setAttribute('src', 'images/back.png');
 		cardElement.setAttribute('id', i);
+		cardElement.setAttribute('class', 'the-card')
 		cardElement.addEventListener('click', flipCard);
 		document.getElementById('game-board').appendChild(cardElement);
 	}
