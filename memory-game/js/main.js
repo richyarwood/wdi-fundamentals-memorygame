@@ -21,7 +21,6 @@ var cards = [
 }
 ];
 
-
 var cardsInPlay = [];
 
 //Createboard function
@@ -37,9 +36,9 @@ var createBoard = function() {
 	}
 };
 
-
 /*
-Reset game function. Iterates through the
+RESET GAME FUNCTION
+Iterates through the
 cards and resets the img src back to the
 original image.
 
@@ -48,35 +47,30 @@ the checkForMatch() function as the array keeps adding.
 */
 
 var resetGame = function() {
-	
+
 	for (var i = 0; i < cards.length; i++) {
 		var resetCards = document.getElementsByTagName('img')[i];
 		resetCards.setAttribute('src', 'images/back.png');
-		cardsInPlay = [];
+		cardsInPlay = []; //Empties the array
 		}
 	};
 
 document.getElementById('reset').addEventListener('click', resetGame);
 
 
-//Flipcard function
-
+/*
+FLIPCARD FUNCTION
+Made this make a random selection from the object array
+*/
 
 var flipCard = function() {
-	var cardId = this.getAttribute('id');
-	this.setAttribute('src', cards[cardId].cardImage);
+var cardId = this.getAttribute('id');
+this.setAttribute('src', cards[cardId].cardImage);
 	cardsInPlay.push(cards[cardId].rank);
-	console.log("User flipped " + cards[cardId].rank);
-	console.log(cards[cardId].suit);
-	console.log(cards[cardId].cardImage);
-	console.log(cardId);
 	checkForMatch();
 };
-//Bonus tasks
-//Add in a reset button
-//Keep track of the users score
 
-var score = 0;
+var score = 0; // Set a score variable
 
 var checkForMatch = function() {
 	if (cardsInPlay.length === 2) {
@@ -91,6 +85,5 @@ var checkForMatch = function() {
 		};
 	};
 };
-
 
 createBoard();
