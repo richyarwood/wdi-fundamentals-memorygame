@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Memory Card Game</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway:400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Memory Game</h1>
+    </header>
+    <nav><a class="main-links" href="#instructions">Instructions</a>
+        <a class="main-links" href="#game">Game</a>
+    </nav>
+    <main>
+        <h2 id="instructions">Instructions</h2>
+        <p>Concentration, also known as Match Match, Memory, Pelmanism, Shinkei-suijaku, Pexeso or simply Pairs, is a card game in which all of the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of
+            the game is to turn over pairs of matching cards.</p>
+        <p>This is great fun to play on your own or with you family and friends.</p>
+        <p>Cards are randomised each time you reset</p>
+
+        <div class="reset-score clearfix">
+            <div class="score" id="score">Score: 0</div>
+            <button id="reset" class="reset-button">RESET</button>
+        </div>
+
+
+        <div id="game-board" class="game-board"></div>
+
+
+        <h3>About this author</h3>
+        <p>The game has been developed by Richard Yarwood.<br>
+            You can <a href="https://twitter.com/richyarwood">follow Richard on twitter</a></p>
+    </main>
+    <footer class="clearfix">
+        <p class="copyright">Copyright 2019</p>
+        <p class="message">Created with &hearts; by <span class="name">GA</span>
+    </footer>
+    <script src="js/random.js"></script>
+</body>
+
+</html>
