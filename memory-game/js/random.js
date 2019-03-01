@@ -1,3 +1,5 @@
+// Added this as a separate file to keep the original separate
+
 var cards = [{
         rank: "queen",
         suit: "hearts",
