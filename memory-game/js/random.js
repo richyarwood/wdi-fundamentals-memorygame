@@ -25,7 +25,7 @@ var cards = [{
 var cardsInPlay = [];
 
 
-// Randomise the cards on reset
+// Randomise the cards
 
 function randomise(a, b) {
     return Math.random() - 0.5;
@@ -85,13 +85,6 @@ var checkForMatch = function() {
 };
 
 //Creating a random board which can flip
-
-/*
-Create an empty array
-Populate that with cards.rank
-Create a function which shuffles this array
-Shuffle this array
- */
 
 
 var createRandomBoard = function() {
